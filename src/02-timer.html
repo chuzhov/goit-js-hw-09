@@ -5,32 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Countdown timer</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      div.wrapper {
+        position: relative;
+      }
+
+      div.bkgr::before {
+        content: "";
+        position: absolute;
+        top: 0; left: 0;
+        height: 100vh; width: 100vw;
+
+        background-color: rgb(251, 139, 139);
+        background-image: linear-gradient(to top, rgba(255, 0, 0, 0.5), rgb(255, 255, 255, 0.9)), url("./img/168536-768x432-1.jpg");
+        /* filter: opacity(0.7); */
+        
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        z-index: -100;
+      }
+
+      /* #datetime-picker {
+        border-color: whitesmoke;
+      }
+       */
+    </style>
   </head>
   <body>
+    <div class="bkgr"></div>
     <p><a href="index.html">Go back</a></p>
 
     <input type="text" id="datetime-picker" />
     <button type="button" data-start>Start</button>
 
-    <div class="timer">
-      <div class="field">
-        <span class="value" data-days>00</span>
-        <span class="label">Days</span>
-      </div>
-      <div class="field">
-        <span class="value" data-hours>00</span>
-        <span class="label">Hours</span>
-      </div>
-      <div class="field">
-        <span class="value" data-minutes>00</span>
-        <span class="label">Minutes</span>
-      </div>
-      <div class="field">
-        <span class="value" data-seconds>00</span>
-        <span class="label">Seconds</span>
+    <div class="container">
+      <div class="timer">
+        <div class="timer__items">
+          <div class="timer__item js-timer__days" data-title="days">00</div>
+          <div class="timer__item js-timer__hours" data-title="hours">00</div>
+          <div class="timer__item js-timer__minutes" data-title="minutes">00</div>
+          <div class="timer__item js-timer__seconds" data-title="seconds">00</div>
+        </div>
       </div>
     </div>
-
     <script src="js/02-timer.js" type="module"></script>
   </body>
 </html>

@@ -16,3 +16,48 @@ img {
   display: block;
   max-width: 100%;
 }
+
+@font-face {
+  font-family: myFont;
+  src: url(/src/css/14\ Segment\ LED\ Regular.ttf);
+}
+
+.timer__items {
+  display: flex;
+  
+  max-width: max-content;
+  margin: 0 auto;
+
+  font-family: myFont, 'Courier New', Courier, monospace;
+  font-size: 4rem;
+  color: red;
+}
+
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  /* margin-left: 2rem; */
+  margin-right: 2rem; 
+  padding-bottom: 15px;  
+  text-align: center;
+}
+
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+  font-size: 1rem;
+  color: black;
+}
+
+.timer__item:not(:last-child)::after {
+  content: '/';
+  position: absolute;
+}
+
+
