@@ -5,9 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Promise generator</title>
     <link rel="stylesheet" href="css/common.css" />
+    <style>
+      body {
+        box-sizing: border-box;
+        margin: 0; padding: 0;
+      }
+
+      div.window {
+
+        padding: 1rem;
+        margin: 1rem auto;
+
+        width: 400px;
+        height: auto;
+        overflow-y: auto;
+
+        background-image: url("img/promise-land-1024x682.webp");
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: 400px 200px;
+
+        border-radius: 5px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+        text-align: center;
+      }
+
+      h1 {
+        margin: 200px auto 0;
+        font-size: 1.5rem;
+        text-align: center;
+      }
+      h2 {
+        margin: 0.5rem auto;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 0.5rem;
+      }
+      button {
+        margin-top: 1rem;
+        width: 50%;
+        height: auto;
+
+        color: white;
+        font-size: 1rem;
+        background-color: green;
+
+        border: 3px solid white;
+        border-radius: 6px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        cursor: pointer;
+      }
+
+      button:disabled {
+        box-shadow: none;
+        color: antiquewhite;
+        background-color: lightseagreen;
+      }
+
+    </style>
   </head>
   <body>
-    <p><a href="index.html">Go back</a></p>
+    <div class="window">
+    
+    <h1>Welcome to the Promised Land!</h1>
+    
+    <h2>Making promises has never been easer!</h2>
 
     <form class="form">
       <label>
@@ -25,6 +96,10 @@
       <button type="submit">Create promises</button>
     </form>
 
+    <p><a href="index.html">Go back</a></p>
+    
+    </div>
+    
     <script src="js/03-promises.js" type="module"></script>
   </body>
 </html>

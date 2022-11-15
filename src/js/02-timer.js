@@ -27,9 +27,6 @@ timerBtn = document.querySelector("button[data-start]");
 timerBtn.addEventListener("click", runTimer)
 timerBtn.disabled = true;
 
-bckgr = document.querySelector("div.bckgr:before");
-console.log(bckgr);
-
 face = document.querySelector("div.timer__items");
 
 function runTimer() {
@@ -63,6 +60,7 @@ function runTimer() {
 function isPickedDateCorrect(selectedDate) {
     if (selectedDate.getTime() <= Date.now()) {
         Notify.failure("Last time Moscow was burnt in September 1812! You have to chose the next date in the future!", notifyOptions);
+        timerBtn.disabled = true;
         return false;
     }
     return true;
