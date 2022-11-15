@@ -23,11 +23,11 @@ const flatpickrOptions = {
 
 let picker = flatpickr("#datetime-picker", flatpickrOptions);
 
-timerBtn = document.querySelector("button[data-start]");
+const timerBtn = document.querySelector("button[data-start]");
 timerBtn.addEventListener("click", runTimer)
 timerBtn.disabled = true;
 
-face = document.querySelector("div.timer__items");
+const face = document.querySelector("div.timer__items");
 
 function runTimer() {
     if (isPickedDateCorrect(picker.selectedDates[0])) {
